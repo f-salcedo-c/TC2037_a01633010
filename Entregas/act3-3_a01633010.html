@@ -3,6 +3,9 @@
   <body>
     
     <h2> Practicando los lenguajes libres de contexto. </h2>
+    <p> Francisco D. Salcedo </p>
+    <p> a01633010 </p>
+    
       <p> <i>Escribe la notación BNF y EBNF para la gramática necesaria para definir modulos y funciones en Elixir.</i> </p>
       
       <h4> BNF </h4>
@@ -15,23 +18,25 @@
       <p>&lt;function-macro&gt; ::= &lt;public-function-macro&gt; | &lt;private-function-macro&gt;</p>
       <p>&lt;parameters&gt; ::= &lt;opening-parenthesis&gt; &lt;parameter&gt; &lt;closing-parenthesis&gt; | &lt;opening-parenthesis&gt; &lt;closing-parenthesis&gt;</p>
       <p>&lt;parameter&gt; ::=   | &lt;parameter&gt; &lt;separator&gt; &lt;parameter&gt;</p>
-      <p>&lt;module-macro&gt; ::= “defmodule”</p>
-      <p>&lt;public-function-macro&gt; ::= “def”</p>
-      <p>&lt;private-function-macro&gt; ::= “defp”</p>
-      <p>&lt;opening-parenthesis&gt; ::= “(“;</p>
-      <p>&lt;closing-parenthesis&gt; ::= “)”;</p>
-      <p>&lt;separator&gt; ::= “,”</p>
-      <p>&lt;do-operator&gt; ::= “do” </p>
-      <p>&lt;end-operator&gt; ::= “end”</p>
-      <p>&lt;EOL&gt; ::= “\n”</p>
+      <p>&lt;module-macro&gt; ::= <b>“defmodule”</b></p>
+      <p>&lt;public-function-macro&gt; ::= <b>“def”</b></p>
+    <p>&lt;private-function-macro&gt; ::= <b>“defp”</b></p>
+      <p>&lt;opening-parenthesis&gt; ::= <b>“(“</b></p>
+      <p>&lt;closing-parenthesis&gt; ::= <b>“)”</b></p>
+      <p>&lt;separator&gt; ::= <b>“,”</b></p>
+      <p>&lt;do-operator&gt; ::= <b>“do”</b></p>
+      <p>&lt;end-operator&gt; ::= <b>“end”</b></p>
+      <p>&lt;EOL&gt; ::= <b>“\n”</b></p>
       
       
       </h4> EBNF </h4>
   <br>
-  <p>&lt;module&gt; ::= “defmodule” &lt;EOL&gt; &lt;module-name&gt; &lt;EOL&gt; “do” { &lt;function&gt;  + }“end” &lt;EOL&gt;;</p>
-  <p>&lt;function&gt; ::= (“def” | “defp”)  &lt;function-name&gt; “(“ { &lt;parameter&gt; * } ? “)” “do” { &lt;expression&gt; +} &lt;EOL&gt;;</p>
-  <p>&lt;parameter&gt; ::= &lt;id&gt; [ “,” ];</p>
+  <p>&lt;module&gt; ::= <b>“defmodule”</b> &lt;EOL&gt; &lt;module-name&gt; &lt;EOL&gt; <b>“do”</b> { &lt;function&gt;  + } <b>“end”</b> &lt;EOL&gt;;</p>
+  <p>&lt;function&gt; ::= (<b>“def”</b> | <b>“defp”</b>)  &lt;function-name&gt; <b>“(“</b> { &lt;parameter&gt; * } ? <b>“)”</b> <b>“do”</b> { &lt;expression&gt; +} &lt;EOL&gt;;</p>
+  <p>&lt;parameter&gt; ::= &lt;id&gt; [ <b>“,”</b> ];</p>
   <p>&lt;expression&gt; ::=  ? Elixir-specified expression rule ?;</p>
+  <p>&lt;function-name&gt; ::= ? Elixir-specified naming rule ?;</p>
+  <p>&lt;module-name&gt; ::= ? Elixir-specified naming rule ?;</p>
   <p>&lt;id&gt; ::= ? Elixir-specified id name rule ?;</p>
   <p>&lt;EOL&gt; ? System-specific end-of-line character ?;</p>
 
